@@ -10,6 +10,7 @@ class ViewController: UIViewController {
         demo1()
         demo2()
         demo3()
+        demo4()
     }
 
     //MARK: - 字符串的遍历
@@ -63,6 +64,22 @@ class ViewController: UIViewController {
         let dateStr1 = String(format: "%02d:%02d:%02d:",h,m,s)
         print(dateStr1)
         
+    }
+    //MARK: - 字符串的子串
+    //一般拿NSString作为中转，因为swift取子串的方法一直在优化
+    func demo4() -> () {
+        let str = "挨饿也不反对和健康 v 和部分的时间出现"
+        let ocStr = str as NSString
+        
+        let s1 = ocStr.substring(to: 3)
+        let s2 = ocStr.substring(with: NSMakeRange(2, 3))
+        let s3 = ocStr.substring(from: 4)
+        
+        print("\(s1) : \(s2) : \(s3)")
+        
+        print(str.startIndex)
+        print(str.endIndex)
+        print(str.substring(from: "ye".startIndex))
     }
 }
 
