@@ -13,13 +13,27 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        demo1() 
+        demo2()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func demo1() -> () {
+        for i in 0..<5 {
+            print(i)
+        }
+        
+        let r1 = 0..<5
+        print(r1)
+        let r2 = 0...5
+        print(r2)
+        
     }
-
-
+    
+    func demo2() -> () {
+        
+        for i in (0..<10).reversed() {
+            print(i)
+        }
+    }
 }
 
